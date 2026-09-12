@@ -1,0 +1,349 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 80, 90, 0.9);
+    padding: 15px 50px;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00a6a6;
+    color: white;
+}
+
+/* Home / Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url("./el-nido-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+    .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+   color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: #00a6a6;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #007f7f;
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 35px;
+    color: #007f7f;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Destination Cards */
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.card {
+    width: 30%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00a6a6;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.card-button:hover {
+    background-color: #007f7f;
+}
+
+/* Footer */
+footer {
+    background-color: #00505a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #e8fafa;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+#history {
+    background-color: #f5ffff;
+}
+
+#history .about-content {
+    border-left: 5px solid #00a6a6;
+}
+
+#history .about-text p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.timeline {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.timeline-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00a6a6;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+    color: #007f7f;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 16px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.tip {
+    background-color: #e8fafa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tip:hover {
+    transform: translateY(-5px);
+}
+
+.tip h3 {
+    color: #007f7f;
+    margin-bottom: 15px;
+}
+
+.tip p {
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .cards {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+}
+#culture {
+    background-color: #f5ffff;
+}
+
+#culture .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#culture .about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.culture-images {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.culture-images img {
+    width: 48%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+#destinations {
+    text-align: center;
+}
+
+#destinations h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
